@@ -8,9 +8,9 @@
 {{ if ge $i 1 }}
 {{ range $index, $e := (first 3 $currentSection) }}
 {{ if eq (mod $index 2) 0 }}
-<article class="bg-green" data-aos="flip-left">
+<article class="bg-near-white" data-aos="flip-left">
 {{ else }}
-<article class="bg-blue" data-aos="flip-right">
+<article class="bg-near-white" data-aos="flip-right">
 {{ end }}
     {{ if eq (mod $index 2) 0 }}
     <div class=" flex items-center items-stretch flex-wrap">

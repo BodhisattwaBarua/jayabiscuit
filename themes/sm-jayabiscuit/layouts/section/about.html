@@ -1,12 +1,12 @@
 {{ partial "header.html" . }}
 {{ partial "page_title.html" . }}
-<div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap flex-nowrap-l pb5">
-      <main class="pr4-l w-100 w-60-l">
-        <div class="aspect-ratio w-100 aspect-ratio--1x1 mb4">
+<div class="flex items-stretch items-start flex-wrap flex-nowrap-l" style="margin-top:-4em;">
+      <main class="w-100 w-60-l flex flex-column product-on-home-page">
+        <div class="aspect-ratio" style="height: 100%;">
           <div class="aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.creative_image "/") | absURL }}')"></div>
         </div>
       </main>
-      <main class="pa3 pa4-ns w-100 w-60-l">
+      <main class="ph3 ph4-m ph5-l pv3 pv4-ns w-100 w-60-l">
         <div class="content">
           {{ .Content }}
         </div>

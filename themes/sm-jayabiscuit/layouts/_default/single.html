@@ -1,20 +1,19 @@
 {{ partial "header.html" . }}
-<div class="aspect-ratio aspect-ratio--4x1 mb3">
+<div class="aspect-ratio aspect-ratio--4x1">
 	<div class="aspect-ratio--object cover bg-center" style="background-image: url('{{ (trim .Params.creative_image "/") | absURL }}')"></div>
 </div>
-<section class="pb2 pt4 bg-white ph3 ph4-m ph5-l">
-  <div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap flex-nowrap-l pb5">
-    <div class="pr4-l w-100 w-50-l mt3" data-aos="zoom-in">
-      <div class="aspect-ratio w-100 aspect-ratio--16x9 ">
-        <div class="aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}')"></div>
-       </div>
+<section class="flex items-stretch items-start flex-wrap flex-nowrap-l">
+	<div class="ph3 ph4-m ph5-l w-100 w-50-l bg-near-white product-on-home-page flex flex-column justify-center items-center" data-aos="slide-right">
+		<div class="content measure">
+			<div class="f1 w-100 ph0 m2 mb3 pv2 tc black heading-font">{{ .Title }}</div>
+			{{partial "separator.html" }}
+			{{ .Content }}
+		</div>
 	</div>
-	<div class="pr4-l w-100 w-50-l mt4" data-aos="slide-left">
-        <div class="content">
-		<div class="f1 w-100 ph0 m2 b b--black-10 mb3 pv2 tc navy bb heading-font">{{ .Title }}</div>
-          {{ .Content }}
-        </div>
-      </div>
-</div>
+  <div class="w-100 w-50-l mt3 pv6 ph3 ph4-m ph5-l" data-aos="zoom-in">
+    <div class="aspect-ratio w-100 aspect-ratio--16x9 ">
+      <div class="aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}')"></div>
+    </div>
+	</div>
 </section>
 {{ partial "footer.html" . }}
