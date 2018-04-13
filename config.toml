@@ -1,0 +1,4 @@
+baseURL = "https://jayabiscuit.netlify.com/"
+languageCode = "en-us"
+title = "JAYA Biscuit"
+theme = "sm-jayabiscuit"
