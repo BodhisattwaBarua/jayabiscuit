@@ -5,9 +5,8 @@ body, *{
   font-family: "Open Sans", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6{
-	font-family: "Muli", sans-serif;
-	font-style: italic;
+h1, h2, h3, h4, h5, h6, .heading-font{
+	font-family: "Playfair Display", serif;
 }
 .box-half{
 	min-height: 100vh;
@@ -370,7 +369,7 @@ h1, h2, h3, h4, h5, h6{
 .blog-card .description {
   padding: 10px;
   box-sizing: border-box;
-  
+
 }
 .blog-card .description h1 {
   font-family: "Roboto";
@@ -448,3 +447,26 @@ h1, h2, h3, h4, h5, h6{
     bottom: 0;
   }
 } */
+
+.product-on-home-page{
+  clip-path: polygon(
+    0 0, /* left top */
+    100% 0, /* right top */
+    85% 100%, /* right bottom */
+    0 100% /* left bottom */
+    );
+}
+.product-on-home-page-right{
+  clip-path: polygon(
+    0 0, /* left top */
+    100% 0, /* right top */
+    100% 100%, /* right bottom */
+    15% 100% /* left bottom */
+    );
+}
+.aspect-ratio--3x1{
+  padding-bottom: 40%;
+}
+.aspect-ratio--4x1{
+  padding-bottom: 25%;
+}

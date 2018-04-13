@@ -6,28 +6,27 @@
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <title>{{.Title}}</title>
-    <link href="https://fonts.googleapis.com/css?family=Muli:700i|Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Open+Sans:400,700" rel="stylesheet">
     <link href="{{ "css/main.css" | absURL }}" rel="stylesheet" type="text/css" />
     <link href="{{ "css/animate.min.css" | absURL }}" rel="stylesheet" type="text/css" />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-
-    <!-- <script src="{{ "js/turbolinks.js" | absURL }}"></script> -->
+    <script src="{{ "js/aos.js" | absURL }}"></script>
   </head>
-  <body class="pt4">
+  <body class="overflow-x-hidden" style="padding-top:82px;">
     <header>
-      <nav class="ph3 ph4-m ph5-l bg-white shadow-1 z-5 pv2 fixed top-0 left-0 right-0 flex items-center bg-dark-red">
-        <div class="pr2">
-          <a href="/" class="link"><img src="{{ (trim .Site.Data.meta.logo "/") | absURL }}" alt="Adiba Infotech" class="nt2" style="max-height:55px;"></a>
+      <nav class="ph3 ph4-m ph5-l shadow-1 z-max pv2 fixed top-0 left-0 right-0 flex items-center bg-green">
+        <div class="pr2 pt2">
+          <a href="/" class="link dib"><img src="{{ (trim .Site.Data.meta.logo "/") | absURL }}" alt="Adiba Infotech" class="nt2" style="max-height:64px;"></a>
         </div>
         <div class="flex-auto">
           <a href="/" class="link f4 ttu tracked navy b"></a>
         </div>
         <div class="tr dn db-l">
-          <a class="link pa2 ttu f5 navy b dib hover-bg-dark-green br2 hover-white" href="/">Home</a>
-          <a class="link pa2 ttu f5 navy b dib hover-bg-dark-green br2 hover-white" href="/brands">Our Brands</a>
-          <a class="link pa2 ttu f5 navy b dib hover-bg-dark-green br2 hover-white" href="/about">About</a>
-          <a class="link pa2 ttu f5 navy b dib hover-bg-dark-green br2 hover-white" href="/contact" data-turbolinks="false">Contact</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-green br2 hover-white" href="/">Home</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-green br2 hover-white" href="/about">About</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-green br2 hover-white" href="/brands">Our Brands</a>
+          <a class="link pa2 ttu tracked f6 white b dib hover-bg-dark-green br2 hover-white" href="/contact" data-turbolinks="false">Contact</a>
         </div>
        <div class="tr db dn-l ba pa2 br2 pointer" onclick="toggle_mobile_menu()">
           <div class="bg-navy mb1" style="height:4px; width:30px;"></div>

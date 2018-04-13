@@ -1,20 +1,20 @@
 {{ partial "header.html" . }}
-<div class="twentyone-nine">
-	<div class="content" style="background-image: url('{{ (trim .Params.creative_image "/") | absURL }}')"></div>
+<div class="aspect-ratio aspect-ratio--4x1 mb3">
+	<div class="aspect-ratio--object cover bg-center" style="background-image: url('{{ (trim .Params.creative_image "/") | absURL }}')"></div>
 </div>
-<section class="pv2 bg-near-white ph3 ph4-m ph5-l">
+<section class="pb2 pt4 bg-white ph3 ph4-m ph5-l">
   <div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap flex-nowrap-l pb5">
-    <main class="pr4-l w-100 w-50-l mt3">
+    <div class="pr4-l w-100 w-50-l mt3" data-aos="zoom-in">
       <div class="aspect-ratio w-100 aspect-ratio--16x9 ">
         <div class="aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}')"></div>
        </div>
-	</main>
-	<main class="pr4-l w-100 w-50-l mt4">
+	</div>
+	<div class="pr4-l w-100 w-50-l mt4" data-aos="slide-left">
         <div class="content">
-		<div class="f3 w-100 ph0 m2 b b--black-10 mb3 pv2 tc navy ttu bb">{{ .Title }}</div>
+		<div class="f1 w-100 ph0 m2 b b--black-10 mb3 pv2 tc navy bb heading-font">{{ .Title }}</div>
           {{ .Content }}
         </div>
-      </main>
+      </div>
 </div>
 </section>
 {{ partial "footer.html" . }}

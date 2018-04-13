@@ -1,8 +1,8 @@
 {{ partial "header.html" . }}
 {{ partial "page_title.html" . }}
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOp_b26dWumYiB9Pc3EwrC-FEPP2CkgGk" data-turbolinks-eval="false"></script>
-  <div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap flex-nowrap-l pb5">
-      <main class="pr4-l w-100 w-40-l">
+  <div class="flex items-stretch items-start flex-wrap flex-nowrap-l bg-light-red" style="margin-top:-4em;">
+      <main class="ph3 ph4-m ph5-l w-100 w-40-l pv4 bg-light-red">
         <address class="mb4 fs-normal">
           <h3>{{.Params.business_name}}</h3>
           <div>{{ replace .Params.address "\n" "<br>" | safeHTML }}</div>
@@ -25,7 +25,7 @@
           <button type="submit" class="bn pa3 bg-navy white hover-bg-dark-navy b ttu tracked br2">Submit</button>
         </form>
       </main>
-      <aside class="pr3-m pr4-l w-100 w-60-l bg-near-white ba bw1 b--black-20 mb4" id="map-canvas" style="min-height: 360px;">
+      <aside class="pr3-m pr4-l w-100 w-60-l product-on-home-page-right" id="map-canvas" style="min-height: 360px;">
       </aside>
   </div>
   <script>
@@ -39,7 +39,7 @@
      styles: [{
        featureType: 'all',
        stylers: [{
-         hue: '#408BC9'
+         hue: '#dddddd'
        },
                  {
                    saturation: 70
@@ -49,7 +49,7 @@
        featureType: 'road.arterial',
        elementType: 'geometry',
        stylers: [{
-         hue: '#0d2d62'
+         hue: '#eeeeee'
        },
                  {
                    saturation: 90
