@@ -8,47 +8,49 @@
 {{ if ge $i 1 }}
 {{ range $index, $e := (first 3 $currentSection) }}
 {{ if eq (mod $index 2) 0 }}
-<article class="bg-green br2" data-aos="flip-left">
+<article class="bg-green" data-aos="flip-left">
 {{ else }}
-<article class="bg-blue br2" data-aos="flip-right">
+<article class="bg-blue" data-aos="flip-right">
 {{ end }}
-  <div class=" flex items-center items-stretch">
     {{ if eq (mod $index 2) 0 }}
-    <div class="w-70 product-on-home-page bg-near-white flex flex-column justify-center bg-center cover" style="background-image: url(' {{ (trim $e.Params.creative_image "/") | absURL }}')">
-      <div class="bg-black-50 pv3 measure white">
-        <div class="f2 mt0 lh-title tl b ph5 white bb b--red pb3 mb3 bw2 heading-font"> {{ $e.Title }}</div>
-        <div class="content measure ph5 pb2">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus fugit debitis quis earum sunt voluptatibus molestias, excepturi nemo culpa est explicabo similique praesentium nulla at quibusdam, non cumque placeat quam.
-        </div>
-        <div class="mv2 ph5">
-          <a href="{{ $e.URL }}" class="bg-red br2 white ph2 pv1 f6 link dib hover-bg-dark-red">Read More</a>
+    <div class=" flex items-center items-stretch flex-wrap">
+      <div class="w-100 w-70-l product-on-home-page bg-near-white flex flex-column justify-center bg-center cover" style="background-image: url(' {{ (trim $e.Params.creative_image "/") | absURL }}')">
+        <div class="bg-black-50 pv4 pv3-ns measure white">
+          <div class="f2 mt0 lh-title tl b ph3 ph5-ns white bb b--red pb3 mb3 bw2 heading-font"> {{ $e.Title }}</div>
+          <div class="content measure ph3 ph5-ns pb2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus fugit debitis quis earum sunt voluptatibus molestias, excepturi nemo culpa est explicabo similique praesentium nulla at quibusdam, non cumque placeat quam.
+          </div>
+          <div class="mv2 ph3 ph5-ns">
+            <a href="{{ $e.URL }}" class="bg-red br2 white ph2 pv1 f6 link dib hover-bg-dark-red">Read More</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="w-30 pv6 ph5">
-      <div class="aspect-ratio aspect-ratio--16x9">
-        <div class="aspect-ratio--object cover bg-center z-0" style="background-image: url('{{ ( trim $e.Params.featured_image "/" ) | absURL}}'); "></div>
+      <div class="w-100 w-30-l pv4 pv6-ns ph5">
+        <div class="aspect-ratio aspect-ratio--16x9">
+          <div class="aspect-ratio--object cover bg-center z-0" style="background-image: url('{{ ( trim $e.Params.featured_image "/" ) | absURL}}'); "></div>
+        </div>
       </div>
     </div>
     {{ else }}
-    <div class="w-30 pv6 ph5">
-      <div class="aspect-ratio aspect-ratio--16x9">
-        <div class="aspect-ratio--object cover bg-center z-0" style="background-image: url('{{ ( trim $e.Params.featured_image "/" ) | absURL}}'); "></div>
-      </div>
-    </div>
-    <div class="w-70 product-on-home-page-right bg-white flex flex-column justify-center bg-center cover" style="background-image: url(' {{ (trim $e.Params.creative_image "/") | absURL }}')">
-      <div class="bg-black-50 pv3 measure ml-auto white tr">
-        <div class="f2 mt0 lh-title tl b ph5 tr bb b--red pb3 mb3 bw2 heading-font" style=""> {{ $e.Title }}</div>
-        <div class="content measure ph5 tr ml-auto pb2">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus fugit debitis quis earum sunt voluptatibus molestias, excepturi nemo culpa est explicabo similique praesentium nulla at quibusdam, non cumque placeat quam.
+    <div class=" flex items-center items-stretch flex-wrap-reverse">
+      <div class="w-100 w-30-l pv4 pv6-ns ph5">
+        <div class="aspect-ratio aspect-ratio--16x9">
+          <div class="aspect-ratio--object cover bg-center z-0" style="background-image: url('{{ ( trim $e.Params.featured_image "/" ) | absURL}}'); "></div>
         </div>
-        <div class="mv2 ph5">
-          <a href="{{ $e.URL }}" class="bg-red br2 white ph2 pv1 f6 link dib hover-bg-dark-red">Read More</a>
+      </div>
+      <div class="w-100 w-70-l product-on-home-page-right bg-white flex flex-column justify-center bg-center cover" style="background-image: url(' {{ (trim $e.Params.creative_image "/") | absURL }}')">
+        <div class="bg-black-50 pv4 pv3-ns measure ml-auto white tr">
+          <div class="f2 mt0 lh-title tl b ph3 ph5-ns tr bb b--red pb3 mb3 bw2 heading-font" style=""> {{ $e.Title }}</div>
+          <div class="content measure ph3 ph5-ns tr ml-auto pb2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus fugit debitis quis earum sunt voluptatibus molestias, excepturi nemo culpa est explicabo similique praesentium nulla at quibusdam, non cumque placeat quam.
+          </div>
+          <div class="mv2 ph-2 ph5-ns">
+            <a href="{{ $e.URL }}" class="bg-red br2 white ph2 pv1 f6 link dib hover-bg-dark-red">Read More</a>
+          </div>
         </div>
       </div>
     </div>
     {{ end }}
-  </div>
 </article>
 {{ end }}
 {{ end }}
