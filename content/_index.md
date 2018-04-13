@@ -10,12 +10,12 @@ slides:
     title: Jaya Biscuits brings you the highest quality farm fresh products
   - description: Jaya Biscuits for your loved ones
     image: /images/home_banner1.jpg
-    link: /about
+    link: 
     title: Jaya Biscuits for your loved ones
   - description: >-
       Start your mornings with Jaya Biscuits!
     image: /images/home_banner2.jpg
-    link: /about
+    link: 
     title: Start your mornings with Jaya Biscuits!
 ---
 
