@@ -464,6 +464,14 @@ h1, h2, h3, h4, h5, h6, .heading-font{
     15% 100% /* left bottom */
     );
 }
+.product-details{
+  clip-path: polygon(
+    0 0, /* left top */
+    90% 0, /* right top */
+    100% 100%, /* right bottom */
+    0 100% /* left bottom */
+    );
+}
 .aspect-ratio--3x1{
   padding-bottom: 40%;
 }
@@ -478,7 +486,7 @@ h1, h2, h3, h4, h5, h6, .heading-font{
   .aspect-ratio--4x1{
     padding-bottom: 70%;
   }
-  .product-on-home-page{
+  .product-on-home-page, .product-details{
     clip-path: polygon(
       0 0, /* left top */
       100% 0, /* right top */
